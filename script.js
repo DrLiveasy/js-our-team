@@ -19,41 +19,61 @@ Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
 Scott Estrada	Developer	            scott-estrada-developer.jpg
 Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg*/
 
+let MembroTeam = {
+    Nome: "",
+    Ruolo: "",
+    Foto:""
+}
+
 let arrayTeam = [
     {
         Nome: "Wayne Barnett",
         Ruolo: "Founder & CEO",
-        foto:"wayne-barnett-founder-ceo.jpg"
+        Foto:"wayne-barnett-founder-ceo.jpg"
     },
     {
         Nome: "Angela Caroll",
         Ruolo: "Chief Editor",
-        foto:"angela-caroll-chief-editor.jpg"
+        Foto:"angela-caroll-chief-editor.jpg"
     },
     {
         Nome: "Walter Gordon",
         Ruolo: "Office Manager",
-        foto:"walter-gordon-office-manager.jpg"
+        Foto:"walter-gordon-office-manager.jpg"
     },
     {
         Nome: "Angela Lopez",
         Ruolo: "Social Media Manager",
-        foto:"angela-lopez-social-media-manager.jpg"
+        Foto:"angela-lopez-social-media-manager.jpg"
     },
     {
         Nome: "Scott Estrada",
         Ruolo: "Developer",
-        foto:"scott-estrada-developer.jpg"
+        Foto:"scott-estrada-developer.jpg"
     },
     {
         Nome: "Barbara Ramos",
         Ruolo: "Graphic Designer",
-        foto:"barbara-ramos-graphic-designer.jpg"
+        Foto:"barbara-ramos-graphic-designer.jpg"
     }
 
 ]
 
 
+
+
+function stampaMembro(Membro){
+    console.log(
+        `
+-------------- Membro ----------------
+    Nome : ${Membro.Nome}
+    Ruolo : ${Membro.Ruolo}
+    Foto : ${Membro.Foto} 
+--------------------------------------
+
+        `
+    )
+}
 
 
 
