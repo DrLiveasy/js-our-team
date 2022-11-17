@@ -84,7 +84,7 @@ function stampaMembro(Membro){
         `
     )
 }*/
-
+/*
 //------------------------Mio Metodo per stampare su html-----------------
 for(const MembroTeam of arrayTeam){
     stampaMembroSuHtml(MembroTeam);
@@ -114,7 +114,7 @@ function stampaMembroSuHtml(Membro){
     `
     )
 
-}
+}*/
 
 
 //------------------metodo fatto con l'aiuto di emanuele----------
@@ -155,3 +155,42 @@ function getHtmlMember(member){
     `
     return result;
 };*/
+
+/////////////////////////////////////METODO FINALE//////////////////////////////////////
+
+let container = document.getElementById("Container");
+/* let teamMember = arrayTeam[0]; /
+
+/ container.innerHTML = arrayTeam[0].Nome; */
+
+
+
+for(const MembroTeam of arrayTeam){
+    container.innerHTML += getHtmlMember(MembroTeam);
+}
+
+function getHtmlMember(member){
+    let result = "";
+    result = `
+    <table class="table table-dark">
+    <thead>
+        <tr>
+        <th scope="col"></th>
+        <th scope="col">Nome</th>
+        <th scope="col">Ruolo</th>
+        <th scope="col">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row"></th>
+        <td>${member.Nome}</td>
+        <td>${member.Ruolo}</td>
+        <td>${member.Foto}</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    `
+    return result;
+};
