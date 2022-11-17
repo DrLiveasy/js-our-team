@@ -19,12 +19,15 @@ Angela Lopez	Social Media Manager	angela-lopez-social-media-manager.jpg
 Scott Estrada	Developer	            scott-estrada-developer.jpg
 Barbara Ramos	Graphic Designer	    barbara-ramos-graphic-designer.jpg*/
 
+
+//variabile con oggetti vuoti che mi aiuta a stampare i dati forniti
 let MembroTeam = {
     Nome: "",
     Ruolo: "",
     Foto:""
 }
 
+//array dei oggetti
 let arrayTeam = [
     {
         Nome: "Wayne Barnett",
@@ -58,13 +61,14 @@ let arrayTeam = [
     }
 
 ]
-
+/*
+//loop che ogni volta eseguito stampa gli oggetti simili dall array 
 for(const MembroTeam of arrayTeam){
     stampaMembro(MembroTeam);
 }
 
 
-
+//funzione per stampare i dati che c'è dentro ogni oggetto
 function stampaMembro(Membro){
     console.log(
         `
@@ -76,9 +80,34 @@ function stampaMembro(Membro){
 
         `
     )
+}*/
+
+for(const MembroTeam of arrayTeam){
+    stampaMembroSuHtml(MembroTeam);
 }
 
+function stampaMembroSuHtml(Membro){
+    document.write(`
+    <table class="table table-dark">
+    <thead>
+        <tr>
+        <th scope="col"></th>
+        <th scope="col">Nome</th>
+        <th scope="col">Ruolo</th>
+        <th scope="col">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row"></th>
+        <td>${Membro.Nome}</td>
+        <td>${Membro.Ruolo}</td>
+        <td>${Membro.Foto}</td>
+        </tr>
+    
+    </tbody>
+    </table>
+    `
+    )
 
-
-
-
+}
