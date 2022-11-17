@@ -59,6 +59,9 @@ let arrayTeam = [
 
 ]
 
+for(const MembroTeam of arrayTeam){
+    stampaMembro(MembroTeam);
+}
 
 
 
