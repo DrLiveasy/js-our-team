@@ -61,6 +61,9 @@ let arrayTeam = [
     }
 
 ]
+
+
+//-------------------stampare so console ------------------
 /*
 //loop che ogni volta eseguito stampa gli oggetti simili dall array 
 for(const MembroTeam of arrayTeam){
@@ -82,6 +85,7 @@ function stampaMembro(Membro){
     )
 }*/
 
+//------------------------Mio Metodo per stampare su html-----------------
 for(const MembroTeam of arrayTeam){
     stampaMembroSuHtml(MembroTeam);
 }
@@ -111,3 +115,43 @@ function stampaMembroSuHtml(Membro){
     )
 
 }
+
+
+//------------------metodo fatto con l'aiuto di emanuele----------
+/*1
+let container = document.getElementById("Container");
+
+//let teamMember = arrayTeam[0];
+
+//container.innerHTML = arrayTeam[0].Nome;
+
+for ( i=0 ; i < arrayTeam.length ; i++ ){
+    container.innerHTML += getHtmlMember();
+}
+
+function getHtmlMember(member){
+    return member.Nome;
+}*/
+
+////////////////////////////////////////////////////////////////////////////
+/*2
+let container = document.getElementById("Container");
+/* let teamMember = arrayTeam[0]; /
+
+/ container.innerHTML = arrayTeam[0].Nome; 
+
+
+
+for(const MembroTeam of arrayTeam){
+    container.innerHTML += getHtmlMember(MembroTeam);
+}
+
+function getHtmlMember(member){
+    let result = "";
+    result = `
+    <p>${member.Nome}</p>
+    <o>${member.Ruolo}</p>
+    <p>${member.Foto}</p> 
+    `
+    return result;
+};*/
